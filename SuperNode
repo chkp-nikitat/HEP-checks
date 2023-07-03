@@ -1,0 +1,13 @@
+# https://support.checkpoint.com/results/sk/sk171703
+
+#
+Determining whether a Client is a Super Node
+To check whether an Endpoint Security Client has been configured as a Super Node, open the Windows Task Manager. There should be two instances of the nginx.exe process, running as  acpnginx user.
+Starting with E85.30 version you can also use following registry entries:
+HKLM\SOFTWARE\WOW6432Node\CheckPoint\Endpoint Security\Device Agent\SuperNode - if this REG_DWORD value exists and is set to 1 then current Endpoint is successfully configured as Super Node.
+HKLM\SOFTWARE\WOW6432Node\CheckPoint\Endpoint Security\Device Agent\SuperNodeLocations - this REG_SZ entry contains list of available Super Node download locations. When this list is empty Client will not use download from Super Node feature.
+#
+
+Get-Item -Path HKLM:\SOFTWARE\WOW6432Node\CheckPoint\Endpoint` Security\Device` Agent\
+Get-Process nginx -IncludeUserName
+
