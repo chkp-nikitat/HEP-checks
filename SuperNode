@@ -1,5 +1,9 @@
 # https://support.checkpoint.com/results/sk/sk171703
-
+Any endpoint can be a Super Node, there are no additional requirements
+Super Node is designed in a way it will not interfere with the day-to-day work of the machine by applying limits to disk size, number of connections and bandwidth usage
+So as long as the machine is capable of running endpoint client it can be a Super Node
+However, the numbers of how many machines per Super Node is effected by the Super Node itself
+As a rule of thumb, I would recommend up to 1000 machines per super node and let the machine be a permanent machine such as a local server or a high end desktop
 #
 Determining whether a Client is a Super Node
 To check whether an Endpoint Security Client has been configured as a Super Node, open the Windows Task Manager. There should be two instances of the nginx.exe process, running as  acpnginx user.
